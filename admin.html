@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <!--Menu Creation-->
+    <form action="admin.php" method="post">
+        <label for="foodname">Food Name:</label>
+        <input type="text" name="foodname" placeholder="In full letters">
+        <br>
+        <label for="foodprice">Food Price:</label>
+        <input type="text" name="foodprice" placeholder="In numbers">
+        <br>
+        <label for="foodtype">Food Type:</label>
+        <select name="foodtype">
+            <option value="Snacks">Snacks</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Meal">Meal</option>
+        </select>
+        <br>
+        <label for="desc">Description:</label>
+        <input type="text" name="fooddesc" >
+        <br>
+        <button name="btn">Submit</button> 
+    </form>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'success') {
+        alert('Menu item added successfully!');
+    }
+    </script>
+</body>
+</html>
